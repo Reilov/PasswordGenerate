@@ -40,7 +40,7 @@ btnGenerate.addEventListener('click', ()=>{
     }
 })
 
-btnCopy.addEventListener('click', ()=>{copyText()});
+btnCopy.addEventListener('click', copyText );
 
 function copyText() {
     navigator.clipboard.writeText(passwordField.innerText)
