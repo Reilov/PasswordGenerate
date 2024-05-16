@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all 0.3s;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.error{
+    color: #b32428;
+}
+.git{
+    width: 30px;
+}
+.git img{
+    width: 100%;
+}
+.password__copy{
+    cursor: pointer;
+}
+.copy{
+    height: 13px;
+}
+
+.wrapper{
+    height: 100vh;
+    background-color: #309157;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+}
+.password__wrapper{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    height: 40px;
+    border-radius: 5px ;
+    border: 2px solid rgba(153, 153, 153, 0.388);
+    background-color: #fff;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    position: relative;
+}
+.password__field{
+    display: flex;
+    flex-grow: 1;
+}
+.password__alert{
+    transform: translate(40%, 0%) scale(0);
+    position: absolute;
+    right: 0;
+    background-color: #b32428;
+    padding: 5px 10px;
+    color: #fff;
+    transition: all 0.3s;
+    z-index: 3;
+}
+.password__alert-active{
+    transform: translate(0%, 130%) scale(1);
+    transition: all 0.3s;
+}
+.password__alert-true{
+    background-color: #309157;
+}
+
+.container{
+    width: 100%;
+    max-width: 370px;
+    padding: 40px 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(110,  99,  99, 0.5);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(110,  99,  99, 0.5);
+    box-shadow: 0px 0px 10px 3px rgba(110,  99,  99, 0.5);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* input[type=number]{
+    -moz-appearance: textfield;
+} */
+.length__field-item{
+    border-radius: 5px ;
+    border: 2px solid rgba(153, 153, 153, 0.388);
+    padding: 5px 10px;
+    width: 40px;
+    text-align: center;
+    margin-right: 15px;
+    background-color: #fff;
+    transition: all 0.3s;
+    outline: none;
+}
+.length__field-item:focus-visible,
+.length__field-item:active
+{
+    
+    border: 2px solid #309157;
+}
+.length__field-range{
+    width: 100%;
+    height: 6px;
+    -webkit-appearance:none;
+    background-color: rgba(153, 153, 153, 0.388);
+    /* border: none; */
+    outline: none;
+    border-radius: 5px ;
+    cursor: pointer;
+}
+.length__field-range::-webkit-slider-thumb{
+    width: 20px;
+    height: 20px;
+    -webkit-appearance:none;
+    background-color: #309157;
+    border-radius:50%;
+    outline: none;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+    cursor:move;
+}
+.wrapper__length{
+    display: flex;
+    align-items:center;
+    margin-bottom: 20px;
+}
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    
+}
+.wrapper__checkbox{
+    margin-bottom: 10px;
+}
+.checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+.checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+.checkbox:checked+label::before {
+    border-color: #309157;
+    background-color: #309157;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.btn-generate{
+    border-radius: 5px ;
+    outline: none;
+    border:none;
+    padding: 5px 10px;
+    width: 150px;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 15px;
+    background-color: #000;
+    color:#fff;
+    display: block;
+    margin: 40px auto 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+@media (hover: hover){
+    .btn-generate:hover{
+        background-color: #414141;
+    }
+}
+@media (hover: none){
+    .btn-generate:active{
+        background-color: #414141;
+    }
+}
+@media (max-width:375px) {
+    .container{
+        padding: 30px 15px;
+    }
+    h1{
+        font-size: 30px;
+    }
+}
